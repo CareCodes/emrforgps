@@ -1,0 +1,530 @@
+VERSION 5.00
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "MSDATLST.OCX"
+Object = "{575E4548-F564-4A9D-8667-6EE848F77EB8}#1.0#0"; "ButtonEx.ocx"
+Begin VB.Form frmDoseUnit 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "All Unit"
+   ClientHeight    =   6540
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   10905
+   BeginProperty Font 
+      Name            =   "Verdana"
+      Size            =   9.75
+      Charset         =   0
+      Weight          =   400
+      Underline       =   0   'False
+      Italic          =   0   'False
+      Strikethrough   =   0   'False
+   EndProperty
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   MinButton       =   0   'False
+   ScaleHeight     =   6540
+   ScaleWidth      =   10905
+   Begin VB.CheckBox chkPackUnit 
+      Caption         =   "Pack Unit"
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   19
+      Top             =   4080
+      Width           =   2055
+   End
+   Begin VB.CheckBox chkDoseUnit 
+      Caption         =   "Dose Unit"
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   18
+      Top             =   3840
+      Width           =   2055
+   End
+   Begin VB.CheckBox chkStrengthUnit 
+      Caption         =   "Strength Unit"
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   17
+      Top             =   3600
+      Width           =   2055
+   End
+   Begin VB.CheckBox chkIssueUnit 
+      Caption         =   "Issue Unit"
+      Height          =   240
+      Left            =   6000
+      TabIndex        =   16
+      Top             =   3360
+      Width           =   2055
+   End
+   Begin VB.TextBox txtTText 
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   360
+      Left            =   6000
+      TabIndex        =   14
+      Top             =   1440
+      Width           =   4575
+   End
+   Begin VB.TextBox txtSText 
+      BeginProperty Font 
+         Name            =   "Arial"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   -1  'True
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   360
+      Left            =   6000
+      TabIndex        =   12
+      Top             =   960
+      Width           =   4575
+   End
+   Begin VB.TextBox txtComments 
+      Height          =   1320
+      Left            =   6000
+      MultiLine       =   -1  'True
+      TabIndex        =   8
+      Top             =   1920
+      Width           =   4575
+   End
+   Begin VB.TextBox txtDoseUnit 
+      Height          =   360
+      Left            =   6000
+      TabIndex        =   6
+      Top             =   480
+      Width           =   4575
+   End
+   Begin btButtonEx.ButtonEx btnAdd 
+      Height          =   375
+      Left            =   120
+      TabIndex        =   2
+      Top             =   5400
+      Width           =   1455
+      _ExtentX        =   2566
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "&Add"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin btButtonEx.ButtonEx btnEdit 
+      Height          =   375
+      Left            =   1680
+      TabIndex        =   3
+      Top             =   5400
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "&Edit"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin btButtonEx.ButtonEx btnDelete 
+      Height          =   375
+      Left            =   3120
+      TabIndex        =   4
+      Top             =   5400
+      Width           =   1335
+      _ExtentX        =   2355
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "&Delete"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin MSDataListLib.DataCombo cmbDoseUnit 
+      Height          =   4740
+      Left            =   120
+      TabIndex        =   1
+      Top             =   480
+      Width           =   4335
+      _ExtentX        =   7646
+      _ExtentY        =   8361
+      _Version        =   393216
+      MatchEntry      =   -1  'True
+      Style           =   1
+      Text            =   ""
+   End
+   Begin btButtonEx.ButtonEx btnClose 
+      Height          =   375
+      Left            =   9480
+      TabIndex        =   11
+      Top             =   6000
+      Width           =   1215
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "C&lose"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin btButtonEx.ButtonEx btnCancel 
+      Height          =   375
+      Left            =   8280
+      TabIndex        =   10
+      Top             =   5400
+      Width           =   1215
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "&Cancel"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin btButtonEx.ButtonEx btnSave 
+      Height          =   375
+      Left            =   6960
+      TabIndex        =   9
+      Top             =   5400
+      Width           =   1215
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      Appearance      =   3
+      Caption         =   "&Save"
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Verdana"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin VB.Label Label4 
+      Caption         =   "In Tamil"
+      Height          =   255
+      Left            =   4680
+      TabIndex        =   15
+      Top             =   1440
+      Width           =   1215
+   End
+   Begin VB.Label Label3 
+      Caption         =   "In Sinhala"
+      Height          =   255
+      Left            =   4680
+      TabIndex        =   13
+      Top             =   960
+      Width           =   1215
+   End
+   Begin VB.Label Label11 
+      Caption         =   "Comments"
+      Height          =   255
+      Left            =   4680
+      TabIndex        =   7
+      Top             =   1920
+      Width           =   1215
+   End
+   Begin VB.Label Label2 
+      Caption         =   "Unit"
+      Height          =   255
+      Left            =   4680
+      TabIndex        =   5
+      Top             =   480
+      Width           =   1215
+   End
+   Begin VB.Label Label1 
+      Caption         =   "Dose Units"
+      Height          =   375
+      Left            =   120
+      TabIndex        =   0
+      Top             =   120
+      Width           =   2655
+   End
+End
+Attribute VB_Name = "frmDoseUnit"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit
+    Dim temSql As String
+    
+Private Sub btnAdd_Click()
+    Dim temText As String
+    If IsNumeric(cmbDoseUnit.BoundText) = False Then
+        temText = cmbDoseUnit.Text
+    Else
+        temText = Empty
+    End If
+    cmbDoseUnit.Text = Empty
+    Call EditMode
+    txtDoseUnit.Text = temText
+    txtDoseUnit.SetFocus
+    SendKeys "{home}+{end}"
+End Sub
+
+Private Sub btnCancel_Click()
+    Call ClearValues
+    Call SelectMode
+    cmbDoseUnit.Text = Empty
+    cmbDoseUnit.SetFocus
+End Sub
+
+Private Sub btnClose_Click()
+    Unload Me
+End Sub
+
+Private Sub btnDelete_Click()
+    Dim i As Integer
+    i = MsgBox("Are you sure you want to delete " & cmbDoseUnit.Text, vbYesNo)
+    If i = vbNo Then Exit Sub
+    Dim rsTem As New ADODB.Recordset
+    With rsTem
+        If .State = 1 Then .Close
+        temSql = "Select * from tblItemUnit where ItemUnitID = " & Val(cmbDoseUnit.BoundText)
+        .Open temSql, cnnStores, adOpenStatic, adLockOptimistic
+        If .RecordCount > 0 Then
+            !Deleted = True
+            !DeletedTime = Now
+            !DeletedUserID = UserID
+            .Update
+            MsgBox "Deleted"
+        Else
+            MsgBox "Nothing to Delete"
+        End If
+        .Close
+    End With
+    Set rsTem = Nothing
+    Call FillCombos
+    cmbDoseUnit.SetFocus
+    cmbDoseUnit.Text = Empty
+    
+End Sub
+
+Private Sub btnEdit_Click()
+    If IsNumeric(cmbDoseUnit.BoundText) = False Then Exit Sub
+    Call EditMode
+    txtDoseUnit.SetFocus
+    SendKeys "{home}+{end}"
+End Sub
+
+Private Sub btnSave_Click()
+    If Trim(txtDoseUnit.Text) = Empty Then
+        MsgBox "You have not entered a DoseUnit"
+        txtDoseUnit.SetFocus
+        Exit Sub
+    End If
+    If IsNumeric(cmbDoseUnit.BoundText) = True Then
+        Call SaveOld
+    Else
+        Call SaveNew
+    End If
+    Call SelectMode
+    Call ClearValues
+    Call FillCombos
+    cmbDoseUnit.Text = Empty
+    cmbDoseUnit.SetFocus
+End Sub
+
+Private Sub cmbDoseUnit_Change()
+    Call ClearValues
+    If IsNumeric(cmbDoseUnit.BoundText) = True Then Call DisplayDetails
+End Sub
+
+
+Private Sub Form_Load()
+    Call SelectMode
+    Call FillCombos
+End Sub
+
+Private Sub EditMode()
+    btnAdd.Enabled = False
+    btnEdit.Enabled = False
+    btnDelete.Enabled = False
+    cmbDoseUnit.Enabled = False
+    
+    txtDoseUnit.Enabled = True
+    txtComments.Enabled = True
+    txtSText.Enabled = True
+    txtTText.Enabled = True
+    chkDoseUnit.Enabled = True
+    chkIssueUnit.Enabled = True
+    chkPackUnit.Enabled = True
+    chkStrengthUnit.Enabled = True
+    
+    btnSave.Enabled = True
+    btnCancel.Enabled = True
+    
+End Sub
+
+Private Sub SelectMode()
+    btnAdd.Enabled = True
+    btnEdit.Enabled = True
+    btnDelete.Enabled = True
+    cmbDoseUnit.Enabled = True
+    
+    txtDoseUnit.Enabled = False
+    txtComments.Enabled = False
+    txtSText.Enabled = False
+    txtTText.Enabled = False
+    chkDoseUnit.Enabled = False
+    chkIssueUnit.Enabled = False
+    chkPackUnit.Enabled = False
+    chkStrengthUnit.Enabled = False
+    
+    
+    btnSave.Enabled = False
+    btnCancel.Enabled = False
+End Sub
+
+Private Sub ClearValues()
+    txtDoseUnit.Text = Empty
+    txtSText.Text = Empty
+    txtTText.Text = Empty
+    txtComments.Text = Empty
+    chkDoseUnit.Text = Empty
+    chkIssueUnit.Text = Empty
+    chkPackUnit.Text = Empty
+    chkStrengthUnit.Text = Empty
+    
+End Sub
+
+Private Sub SaveNew()
+    Dim rsTem As New ADODB.Recordset
+    With rsTem
+        If .State = 1 Then .Close
+        temSql = "Select * from tblItemUnit"
+        .Open temSql, cnnStores, adOpenStatic, adLockOptimistic
+        .AddNew
+        !ItemUnit = txtDoseUnit.Text
+        !Comments = txtComments.Text
+        !SText = txtSText.Text
+        !TText = txtTText.Text
+        If chkDoseUnit.Value = 1 Then
+            !isDoseUnit = True
+        Else
+            !isDoseUnit = False
+        End If
+        If chkIssueUnit.Value = 1 Then
+            !IsIssueUnit = True
+        Else
+            !IsIssueUnit = False
+        End If
+        
+        If chkStrengthUnit.Value = 1 Then
+            !isStrengthUnit = True
+        Else
+            !isStrengthUnit = False
+        End If
+        If chkPackUnit.Value = 1 Then
+            !IsPackUnit = True
+        Else
+            !IsPackUnit = False
+        End If
+        
+        .Update
+        .Close
+    End With
+    Set rsTem = Nothing
+End Sub
+
+Private Sub SaveOld()
+    Dim rsTem As New ADODB.Recordset
+    With rsTem
+        If .State = 1 Then .Close
+        temSql = "Select * from tblItemUnit where ItemUnitID = " & Val(cmbDoseUnit.BoundText)
+        .Open temSql, cnnStores, adOpenStatic, adLockOptimistic
+        If .RecordCount > 0 Then
+        !ItemUnit = txtDoseUnit.Text
+        !SText = txtSText.Text
+        !TText = txtTText.Text
+        !Comments = txtComments.Text
+        If chkDoseUnit.Value = 1 Then
+            !isDoseUnit = True
+        Else
+            !isDoseUnit = False
+        End If
+        If chkIssueUnit.Value = 1 Then
+            !IsIssueUnit = True
+        Else
+            !IsIssueUnit = False
+        End If
+        
+        If chkStrengthUnit.Value = 1 Then
+            !isStrengthUnit = True
+        Else
+            !isStrengthUnit = False
+        End If
+        If chkPackUnit.Value = 1 Then
+            !IsPackUnit = True
+        Else
+            !IsPackUnit = False
+        End If
+        
+        .Update
+        End If
+        .Close
+    End With
+    Set rsTem = Nothing
+End Sub
+
+Private Sub FillCombos()
+    Dim It As New clsFillCombos
+    It.FillBoolCombo cmbDoseUnit, "ItemUnit", "ItemUnit", "IsDoseUnit", True
+End Sub
+
+Private Sub DisplayDetails()
+    Dim rsTem As New ADODB.Recordset
+    With rsTem
+        If .State = 1 Then .Close
+        temSql = "Select * from tblItemUnit where ItemUnitID = " & Val(cmbDoseUnit.BoundText)
+        .Open temSql, cnnStores, adOpenStatic, adLockReadOnly
+        If .RecordCount > 0 Then
+            txtDoseUnit.Text = !ItemUnit
+            txtSText.Text = !SText
+            txtTText.Text = !TText
+            txtComments.Text = Format(!Comments, "")
+            If !isDoseUnit = True Then chkDoseUnit.Value = 1
+            If !isStrengthUnit = True Then chkStrengthUnit.Value = 1
+            If !IsIssueUnit = True Then chkIssueUnit.Value = 1
+            If !IsPackUnit = True Then chkPackUnit.Value = 1
+        End If
+        .Close
+    End With
+    Set rsTem = Nothing
+End Sub

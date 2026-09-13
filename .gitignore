@@ -1,0 +1,17 @@
+/build/
+/dist/
+/Package/
+/Setup/
+*.log
+*.exe
+*.TMP
+*.tmp
+*.SCC
+*.scc
+*.rar
+*.OBJ
+# Access database (may contain patient data; excluded from the public archive)
+EMA3.mdb
+*.mdb
+*.accdb
+*.stackdump

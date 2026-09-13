@@ -1,0 +1,51 @@
+Lakmedipro
+E-Channeling Assistant
+The best assistant for channeling centre management
+Lakmedipro is a software development company specialized in medical software. It has a wide range of ready made medical software which can be easily incorporated your to your hospital. We also offer you customized software development as well.
+E-Channeling assistant is the software which completely manages the channeling centers.  Though it is packed with several advanced features, is it quite simple to operate. It can be easily customized to meet your specific requirements. It is fully integrated software which can seamlessly communicate with other hospital management software.
+Features
+Appointment Management
+1. According to time
+Patients are given the approximate appointment time according to the starting time and the usual duration of a visit.
+2. According to number
+A serial number can be given to each patient of a secession of bookings by a specific doctor.
+3. Multiple secessions
+Any number of secession per a day can be added for a single doctor. Ex: Morning Secession, Evening Secession, Fast Lane, Normal Lane, etc. The characteristics like doctor fee, hospital fee, starting time, and usual duration for a single visit can all be customized for any secession separately.
+4. Weekday Scheduling
+All the scheduling can be done according to the weekday initially. For example, there can be two secession called morning secession and evening secession for Mondays and only one secession for Saturdays called Saturday Secession.
+5. Holiday Scheduling
+A different set of secessions can be added for special days. For example, a normal Monday may have two secessions starting at 7 am and 5 pm, there may be only one secession starting at 1 pm on a Poyaday.
+6. Leave Days
+Adding leave days is simple and no patient will be given an appointment during those days.
+7. Appointment Cancellations
+Any appointment can be cancelled as selected by the user authority levels.
+Although both the doctor fee and the hospital fee will be paid back to the patient by default, either doctor fee alone or part of it can be repaid. A receipt can be printed for cancellations if necessary.
+8. Appointment Refunds
+Refunds can be made as requested by the doctor. Total doctor fee, a part of doctor fee, the hospital fee, a part of hospital fee, can be repaid to the patient. A receipt can be printed for refunds if necessary.
+9. Marking patient Present / Absent
+If the management wants to allow making patient absent or present, any patient can be easily marked present or absent. The management can deside weather to add absent patients doctor fee to the doctor payments or not.
+10. Reprints
+Name changes
+Agent Bookings
+
+Financial Management
+1. Different payment methods
+Patients can pay the hospital by cash. Credit bookings are also accepted and after settling the credit, patient will be included in the booking lists. If there are agent, they can also reserve bookings. On request, the program can be upgraded to use credit cards and cheques.
+2. Different fees
+Different doctor fees can be allocated for any doctor. The doctor fee can be changed for each secession, for example, the doctor fee for fast lane patients may be Rs. 900.00, where as that for normal lane patients may be Rs. 800.00. The hospital fee can also vary according to secessions. There can be different fee for agent bookings and foreign patients.
+3. Shift End Cash Balance
+When a cashier finisher her duty, she can generate a shift-end summery which include all the summerised data about cash collection. If necessary she can get reports of all the transactions she had done during the shift. She won’t allowed to take reports of her previous shifts.
+4. Day End Cash Balance
+The one who is leaving the reception can take a Day
+5. Agent Financial Management
+6. Credit Management
+7. Credit Card Management
+8. Cheque Management
+9.
+Fully CUstamizable
+1. Printer settings
+2. Paper settings
+3. Printing positions
+4. Database location
+Different authority levels
+Data back up and restoration

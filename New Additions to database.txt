@@ -1,0 +1,42 @@
+tblPatient
+	COmments	Memo
+
+New tblFamilyDiagnosis
+
+tblItem
+	AddedDate	DateTime
+	AddedTime	DateTime
+	AddedUserID	Number		Long
+
+
+tblSaleBill
+	BillDate	DateTime
+	BillTime	DateTime
+	CompeltedDate	DateTime
+	COmpletedTime	DateTime
+	QueueID		number
+
+
+	DeletedDate	dateTime
+	DeletedTime	datetime
+	CancelledDate	datetime
+	CancelledTime	datetime
+
+
+
+tblncome
+	DeletedDate	datetime
+	DeletedTime	datetime
+
+	PaymentValue	>>>>>>>>	Value
+	PaymentComments	>>>>>>>>	Comments
+	IncomeMethodID	>>>>>>>		IncomeCategoryID
+	InstitutionID	>>>>>>>>	FromInstitutionID
+		
+
+	IncomeDate	datetime
+	IncomeTime	datetime
+	IncomeDateTime	datetime
+	IncomeUserID	number
+	FromPatientID	number
+	

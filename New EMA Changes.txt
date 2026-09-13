@@ -1,0 +1,7 @@
+New Database Changes
+	Replace tblFixedCategories
+	Replace tblSaleBill
+	Replace tblSale
+	Add tblSaleCategory
+	Add tblBHT
+	Add Database Password - REDACTED
